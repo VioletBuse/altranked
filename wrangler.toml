@@ -1,0 +1,26 @@
+name = "altranked-api"
+main = "api/index.ts"
+compatibility_date = "2023-09-22"
+
+compatibility_flags = [
+	"nodejs_compat"
+]
+
+[env.production.vars]
+WORKER_ENV="production"
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "altranked"
+database_id = "08f72782-d5c5-4373-972a-db858651d2e2"
+migrations_table = "migrations"
+migrations_dir = "drizzle"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["GameDO"]
+
+[[migrations]]
+tag = "v2"
+deleted_classes = ["GameDO"]
+

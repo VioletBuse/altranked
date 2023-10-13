@@ -1,0 +1,48 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1696485417127,
+      "tag": "0000_gifted_wither",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1696574535933,
+      "tag": "0001_chemical_anita_blake",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1696575685602,
+      "tag": "0002_small_echo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1696924790381,
+      "tag": "0003_wealthy_natasha_romanoff",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1697107602460,
+      "tag": "0004_neat_quasimodo",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1697186020959,
+      "tag": "0005_gigantic_lilandra",
+      "breakpoints": true
+    }
+  ]
+}

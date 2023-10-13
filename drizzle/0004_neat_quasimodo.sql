@@ -1,0 +1,1 @@
+ALTER TABLE games ADD `upgrade_2` integer DEFAULT 0 NOT NULL;
