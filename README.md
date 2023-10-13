@@ -1,27 +1,55 @@
-# React + TypeScript + Vite
+# Altranked
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Altranked is an idle game I decided to build while I was on
+a loss streak in Valorant. I wanted to build something that
+would let me rank up without having to play the game.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## Expanding the ESLint configuration
+This project was built using the following technologies:
+* [React + Vite](https://vitejs.dev/)
+* [Cloudflare Workers](https://workers.cloudflare.com/)
+* [TailwindCSS](https://tailwindcss.com/)
+* [Trpc](https://trpc.io/)
+* [Drizzle-ORM](https://orm.drizzle.team/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Development
 
-- Configure the top-level `parserOptions` property like this:
+To run this project locally, you will need to have the following
+installed:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+* [Node.js](https://nodejs.org/en/)
+* [Npm](https://www.npmjs.com/)
+* [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
+
+To start the api server, run the following commands:
+
+```bash
+npm run up:dev
+npm run api
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To start the frontend, run the following commands:
+
+```bash
+npm run web
+```
+
+## Deployment
+
+To deploy this project, you will need to have the following
+
+* [Cloudflare Account](https://dash.cloudflare.com/sign-up)
+* [A Cloudflare D1 Database](https://developers.cloudflare.com/d1/)
+* [A Domain](https://www.cloudflare.com/products/registrar/)
+
+First, you have to modify the `wrangler.toml` file to include
+your d1 database credentials, as well as the .env.production file to
+your domain. Then, you must run the frontend build
+command `npm run build`. You will have to create a cloudflare pages site
+and manually upload the `dist` folder to the site. Finally you can
+deploy the api with `npm run deploy:api`.
+
+Following deployments can just be run with `npm run deploy`
